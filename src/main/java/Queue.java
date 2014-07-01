@@ -1,9 +1,15 @@
-public class Queue {
+public class Queue<Item> {
+    private int size = 0;
+
     public boolean isEmpty(){
-        return true;
+        return size() == 0;
     }
 
     public int size() {
-        return 0;
+        return size;
+    }
+
+    public void enqueue(Item item) {
+        size++;
     }
 }
