@@ -7,8 +7,9 @@ It is based off the "[Algorithms, 4th Edition website](http://algs4.cs.princeton
 
 ## Mission
 
-Implement the queue and the stack abstract data types in Java based on the code
-for that was implemented for the Bag ADT in class. Use good test driven development
+Implement the queue and the stack abstract data types in Java. These data
+structures will use [Java generics](http://docs.oracle.com/javase/tutorial/java/generics/)
+to be able to handle items that are all of the same type. Use good test driven development
 flow to help with the development of these data structures.
 
 For the queue, you will implement the following methods:
