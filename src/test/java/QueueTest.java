@@ -39,4 +39,13 @@ public class QueueTest {
         assertTrue(q.isEmpty());
         assertEquals(0, q.size());
     }
+
+    @Test
+    public void removingAnItemReturnsProperItem() {
+        Queue<String> q = new Queue<String>();
+
+        q.enqueue("Hello");
+        q.enqueue("World");
+        assertEquals("Hello", q.dequeue());
+    }
 }
