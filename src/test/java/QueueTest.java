@@ -1,8 +1,10 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class QueueTest {
     @Test
@@ -47,5 +49,27 @@ public class QueueTest {
         q.enqueue("Hello");
         q.enqueue("World");
         assertEquals("Hello", q.dequeue());
+    }
+
+    @Test
+    public void iterationIsInCorrectOrder() {
+        Queue<String> q = new Queue<String>();
+
+        q.enqueue("Hello");
+        q.enqueue("World");
+        q.enqueue("Goodbye");
+
+        List<String> result = new ArrayList<String>();
+        for (String s : q) {
+            result.add(s);
+        }
+
+        String[] expected = new String[3];
+        expected[0] = "Hello";
+        expected[1] = "World";
+        expected[2] = "Goodbye";
+
+        assertArrayEquals(result.toArray(), expected);
+
     }
 }
