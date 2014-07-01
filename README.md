@@ -31,7 +31,9 @@ For the stack, you will implement the following methods:
 
 ## Iteration
 
-TBD
+Implement the [Iterable](http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) interface.
+The iterator should return the elements in the order that they would be dequeued/popped from
+their respective data structures.
 
 ## Using a Linked List
 
