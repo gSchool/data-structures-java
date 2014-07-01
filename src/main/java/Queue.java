@@ -12,4 +12,9 @@ public class Queue<Item> {
     public void enqueue(Item item) {
         size++;
     }
+
+    public Item dequeue() {
+        size--;
+        return null;
+    }
 }

@@ -23,4 +23,20 @@ public class QueueTest {
         assertFalse(q.isEmpty());
         assertEquals(2, q.size());
     }
+
+    @Test
+    public void removingAnItemChangesSize() {
+        Queue<String> q = new Queue<String>();
+
+        q.enqueue("Hello");
+        q.enqueue("World");
+        q.dequeue();
+
+        assertFalse(q.isEmpty());
+        assertEquals(1, q.size());
+
+        q.dequeue();
+        assertTrue(q.isEmpty());
+        assertEquals(0, q.size());
+    }
 }
